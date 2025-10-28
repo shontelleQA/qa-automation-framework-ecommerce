@@ -43,8 +43,8 @@ class TestE2ECheckoutGuestUser:
         checkout.fill_in_billing_info()
         checkout.click_place_order()
 
-        # --- Step 7: Verify order received ---
-        # order_received.verify_order_success_message()
+        # --- Step 7: Verify order confirmation page ---
+        order_received.verify_order_received_page_loaded()
 
         # Temporary assertion to mark test completed
         assert True
