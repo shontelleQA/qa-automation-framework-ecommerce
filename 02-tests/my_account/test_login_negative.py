@@ -1,4 +1,4 @@
-# src/tests/my_account/test_login_negative.py
+# 01-src/02-tests/my_account/test_login_negative.py
 
 import pytest
 from src.pages.MyAccountSignedOut import MyAccountSignedOut

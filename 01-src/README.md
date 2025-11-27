@@ -211,8 +211,8 @@ pytest
 
 **Run specific suites**
 ```bash
-pytest tests/end_to_end
-pytest tests/my_account/test_login_negative.py
+pytest 02-tests/end_to_end
+pytest 02-tests/my_account/test_login_negative.py
 ```
 
 ---
