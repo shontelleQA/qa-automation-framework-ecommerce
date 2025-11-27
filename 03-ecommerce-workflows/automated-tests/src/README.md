@@ -258,4 +258,4 @@ If another engineer were to extend the framework:
 - Maintain the separation of components vs pages
 - Add tests under the correct test suite folder
 
-This keeps the architecture consistent.
+This keeps the architecture consistent...
