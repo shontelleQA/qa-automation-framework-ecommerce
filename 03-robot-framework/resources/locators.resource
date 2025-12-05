@@ -18,3 +18,5 @@ ${BILLING_PHONE_FIELD}         id:billing_phone
 ${BILLING_EMAIL_FIELD}         id:billing_email
 
 ${PLACE_ORDER_BUTTON}          id:place_order
+
+${ORDER_RECEIVED_HEADER}    css:h1.entry-title
