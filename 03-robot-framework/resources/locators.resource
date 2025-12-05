@@ -6,3 +6,5 @@ ${COUPON_FIELD}                  css:input#wc-block-components-totals-coupon__in
 ${APPLY_COUPON_BUTTON}           css:button.wc-block-components-totals-coupon__button
 ${CART_PAGE_MESSAGE}             css:div.wc-block-components-notice-banner__content
 ${PROCEED_TO_CHECKOUT_BTN}       xpath://span[text()='Proceed to Checkout']/..
+
+${CART_ICON}    id:site-header-cart
