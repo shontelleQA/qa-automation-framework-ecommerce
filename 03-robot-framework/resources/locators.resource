@@ -8,3 +8,13 @@ ${CART_PAGE_MESSAGE}             css:div.wc-block-components-notice-banner__cont
 ${PROCEED_TO_CHECKOUT_BTN}       xpath://span[text()='Proceed to Checkout']/..
 
 ${CART_ICON}    id:site-header-cart
+
+${BILLING_FIRST_NAME_FIELD}    id:billing_first_name
+${BILLING_LAST_NAME_FIELD}     id:billing_last_name
+${BILLING_ADDRESS_1_FIELD}     id:billing_address_1
+${BILLING_CITY_FIELD}          id:billing_city
+${BILLING_POSTCODE_FIELD}      id:billing_postcode
+${BILLING_PHONE_FIELD}         id:billing_phone
+${BILLING_EMAIL_FIELD}         id:billing_email
+
+${PLACE_ORDER_BUTTON}          id:place_order
