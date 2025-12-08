@@ -67,12 +67,14 @@ tests/
 ```
 
 ### `robot/`
-A small, contained Robot Framework suite demonstrating hybrid-framework skills.
+A small, contained Robot Framework suite demonstrating hybrid-framework skills which includes a tiny collection of smoke tests (homepage, cart, header navigation, my account) to demonstrate how the same application can be exercised through Robot Framework as well. These are intentionally lightweight and readable—designed to show multi-framework coverage without bloating the repo.
+
+The full end-to-end checkout test is included but marked as quarantined to model real-world flakiness handling in modern WooCommerce blocks.
 ```
 robot/
+  keywords/
   tests/
   resources/
-  keywords/
 ```
 
 ---
