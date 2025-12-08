@@ -12,6 +12,6 @@ Each test validates a core area of the e-commerce site:
 The test suite uses:
 
 - **SeleniumLibrary**
-- **Shared locators** defined in `resources/locators.resource`
-- **Shared variables** from `variables.resource`
-- **Reusable keywords** from the `keywords/` directory
+- **Shared locators** defined in [`resources/locators.resource`](resources/locators.resource)
+- **Shared variables** from [`resources/variables.resource`](resources/variables.resource)
+- **Reusable keywords** from the [`keywords/`](keywords/) directory
