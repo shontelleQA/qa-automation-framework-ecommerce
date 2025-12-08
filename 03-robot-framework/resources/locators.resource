@@ -25,3 +25,6 @@ ${PLACE_ORDER_BUTTON}          id:place_order
 ${ORDER_RECEIVED_HEADER}    css:h1.entry-title
 
 ${CART_COUNT_BADGE}    css:span.count
+
+${MY_ACCOUNT_LINK}    xpath://a[contains(@href, 'my-account')]
+
