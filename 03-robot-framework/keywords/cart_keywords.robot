@@ -5,7 +5,11 @@ Resource   ../resources/locators.resource
 
 *** Keywords ***
 Apply Coupon
-    Click Element    ${COUPON_TOGGLE}
+    ${toggle_present}=    Run Keyword And Return Status    Element Should Be Visible    ${COUPON_TOGGLE}
+    IF    ${toggle_present}
+        Click Element    ${COUPON_TOGGLE}
+    END
+
     Wait Until Element Is Visible    ${COUPON_FIELD}    timeout=15s
     Input Text       ${COUPON_FIELD}    ska100
     Click Button     ${APPLY_COUPON_BUTTON}
