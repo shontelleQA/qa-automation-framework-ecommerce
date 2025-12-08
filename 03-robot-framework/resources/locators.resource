@@ -1,7 +1,7 @@
 *** Variables ***
 ${ADD_TO_CART_BUTTON}    css:a.add_to_cart_button
 
-${COUPON_TOGGLE}                 css:div.wc-block-components-panel__button[role='button']
+${COUPON_TOGGLE}                 css:.wc-block-components-panel__button
 ${COUPON_FIELD}                  css:input#wc-block-components-totals-coupon__input-coupon
 ${APPLY_COUPON_BUTTON}           css:button.wc-block-components-totals-coupon__button
 ${CART_PAGE_MESSAGE}             css:div.wc-block-components-notice-banner__content
@@ -23,3 +23,5 @@ ${BILLING_EMAIL_FIELD}         id:billing_email
 ${PLACE_ORDER_BUTTON}          id:place_order
 
 ${ORDER_RECEIVED_HEADER}    css:h1.entry-title
+
+${CART_COUNT_BADGE}    css:span.count
