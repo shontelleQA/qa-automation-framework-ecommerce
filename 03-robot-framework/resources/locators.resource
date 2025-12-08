@@ -7,6 +7,9 @@ ${APPLY_COUPON_BUTTON}           css:button.wc-block-components-totals-coupon__b
 ${CART_PAGE_MESSAGE}             css:div.wc-block-components-notice-banner__content
 ${PROCEED_TO_CHECKOUT_BTN}       xpath://span[text()='Proceed to Checkout']/..
 
+${CLASSIC_COUPON_FIELD}    id:coupon_code
+${CLASSIC_APPLY_COUPON}    name:apply_coupon
+
 ${CART_ICON}    id:site-header-cart
 
 ${BILLING_FIRST_NAME_FIELD}    id:billing_first_name
