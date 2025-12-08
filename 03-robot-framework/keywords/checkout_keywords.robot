@@ -33,6 +33,7 @@ Input Billing Email
     Input Text    ${BILLING_EMAIL_FIELD}    ${value}
 
 Fill Billing Info
+    Wait Until Element Is Visible    ${BILLING_FIRST_NAME_FIELD}    timeout=20s
     Input Billing First Name
     Input Billing Last Name
     Input Billing Address
@@ -40,6 +41,7 @@ Fill Billing Info
     Input Billing Postcode
     Input Billing Phone
     Input Billing Email
+
 
 Click Place Order
     Click Button    ${PLACE_ORDER_BUTTON}
