@@ -33,6 +33,8 @@ Input Billing Email
     Input Text    ${BILLING_EMAIL_FIELD}    ${value}
 
 Fill Billing Info
+    Scroll Page    0    500
+    Wait Until Page Contains Element    ${BILLING_FIRST_NAME_FIELD}    timeout=30s
     Wait Until Element Is Visible    ${BILLING_FIRST_NAME_FIELD}    timeout=20s
     Input Billing First Name
     Input Billing Last Name
