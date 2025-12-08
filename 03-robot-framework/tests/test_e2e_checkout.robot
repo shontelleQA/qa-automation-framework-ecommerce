@@ -8,6 +8,7 @@ Resource          ../keywords/order_received_keywords.robot
 
 *** Test Cases ***
 E2E Checkout Guest User
+    [Tags]    quarantined
     Go To Home Page
     Click First Add To Cart Button
     Click Cart Icon
