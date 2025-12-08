@@ -4,6 +4,10 @@ Resource   ../resources/variables.resource
 Resource   ../resources/locators.resource
 
 *** Keywords ***
+Scroll Page
+    [Arguments]    ${x}=0    ${y}=300
+    Execute JavaScript    window.scrollBy(${x}, ${y});
+
 Apply Coupon
     # Try Blocks version first
     ${blocks_toggle_present}=    Run Keyword And Return Status    Element Should Be Visible    ${COUPON_TOGGLE}
@@ -23,8 +27,6 @@ Apply Coupon
     Input Text    ${CLASSIC_COUPON_FIELD}    ska100
     Click Button    ${CLASSIC_APPLY_COUPON}
     Wait Until Page Contains Element    ${CART_PAGE_MESSAGE}    timeout=20s
-
-
 
 Proceed To Checkout
     Click Element    ${PROCEED_TO_CHECKOUT_BTN}
