@@ -13,6 +13,7 @@ E2E Checkout Guest User
     Click Cart Icon
     Apply Coupon
     Proceed To Checkout
+    Wait For Checkout Form
     Fill Billing Info
     Click Place Order
     Verify Order Received Page Loaded
