@@ -10,5 +10,3 @@ Click Cart Icon
 Click My Account Link
     Click Element    ${MY_ACCOUNT_LINK}
 
-Click My Account Link
-    Click Element    xpath://a[contains(@href, 'my-account')]
