@@ -9,24 +9,39 @@ Scroll Page
     Execute JavaScript    window.scrollBy(${x}, ${y});
 
 Apply Coupon
-    # Try Blocks version first
-    ${blocks_toggle_present}=    Run Keyword And Return Status    Element Should Be Visible    ${COUPON_TOGGLE}
+    # Ensure the Blocks cart is loaded
+    Wait Until Element Is Visible    css:.wp-block-woocommerce-cart    timeout=10s
+
+    # Give the page time to fully render all interactive elements
+    Sleep    2s
+
+    # Scroll to where the coupon area should be
+    Scroll Page    0    300
+    Sleep    0.5s
+
+    # Try Blocks version first (with longer timeout)
+    ${blocks_toggle_present}=    Run Keyword And Return Status
+    ...    Wait Until Element Is Visible    ${COUPON_TOGGLE}    timeout=10s
+
     IF    ${blocks_toggle_present}
-        Scroll Page    0    300
         Click Element    ${COUPON_TOGGLE}
-        Wait Until Page Contains Element    ${COUPON_FIELD}    timeout=20s
+
+        # Wait for dynamic coupon form to appear
+        Wait Until Keyword Succeeds    10x    1s    Element Should Be Visible    ${COUPON_FIELD}
+
         Input Text       ${COUPON_FIELD}    ska100
-        Click Button     ${APPLY_COUPON_BUTTON}
-        Wait Until Page Contains Element    ${CART_PAGE_MESSAGE}    timeout=20s
+        Click Element    ${APPLY_COUPON_BUTTON}
+
+        # Wait for snackbar message to appear
+        Wait Until Keyword Succeeds    10x    1s    Element Should Be Visible    ${CART_PAGE_MESSAGE}
         RETURN
     END
 
-    # Classic WooCommerce coupon UI fallback
-    Scroll Page    0    300
-    Wait Until Page Contains Element    ${CLASSIC_COUPON_FIELD}    timeout=20s
+    # Classic fallback (won't be used, but safe to keep)
+    Wait Until Element Is Visible    ${CLASSIC_COUPON_FIELD}    timeout=20s
     Input Text    ${CLASSIC_COUPON_FIELD}    ska100
     Click Button    ${CLASSIC_APPLY_COUPON}
-    Wait Until Page Contains Element    ${CART_PAGE_MESSAGE}    timeout=20s
+    Wait Until Page Contains Element    css:.woocommerce-message    timeout=20s
 
 Proceed To Checkout
     Click Element    ${PROCEED_TO_CHECKOUT_BTN}
